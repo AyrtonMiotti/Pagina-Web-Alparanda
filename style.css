@@ -63,7 +63,7 @@
 }
 
 
-.button{   
+.txtBtn{   
  background: chocolate;
     width: 24%;
     height: 15%;
@@ -72,5 +72,4 @@
     justify-content: center;
     margin: 2%;
     border-radius: 50px;
-    font-size: smaller;
 }
