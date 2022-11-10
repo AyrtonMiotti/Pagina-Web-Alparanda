@@ -96,12 +96,27 @@ body{
 }
 
 /*---------------------CHARACTERS------------------------*/
+body{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: rgb(9, 74, 136);
+}
 
 .mainContainer{
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 100%;
+}
+
+.card{
+    position: relative;
+    width: 300px;
+    height: 350px;
+    margin: 20px;
 }
 
 .card .face{
@@ -111,7 +126,7 @@ body{
     backface-visibility: hidden;
     border-radius: 10px;
     overflow: hidden;
-    transition: 1s;
+    transition: .5s;
 }
 
 .card .front{
@@ -130,10 +145,20 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 
 .card .back img{
     width: 70%;
+}
+
+.card .back a {
+    position: relative;
+    border-top: solid 1px #f3f3f3;
+    height: 50px;
+    line-height: 50px;
+    text-decoration: none;
+    color: aquamarine;
 }
 
 .card:hover .front{
@@ -142,4 +167,14 @@ body{
 
 .card:hover .back{
     transform: perspective(600px) rotateY(360deg);
+}
+
+
+.select{
+    bottom: 20px;
+    position: absolute;
+}
+
+.select:hover{
+    
 }
