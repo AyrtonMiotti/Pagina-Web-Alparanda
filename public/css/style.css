@@ -99,26 +99,27 @@ body{
 
 .mainContainer{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     height: 100%;
 }
 
 .card .face{
     position: absolute;
-    width: 600px;
-    height: 600px;
+    width: 400px;
+    height: 650px;
     backface-visibility: hidden;
     border-radius: 10px;
     overflow: hidden;
-    transition: 1.5s;
+    transition: 1s;
 }
 
 .card .front{
     transform: perspective(600px) rotateY(0deg);
-    /*display: flex;
+    display: flex;
     flex-direction: column;
-    justify-content: space-between;*/
+    justify-content: center;
+    align-items: center;
 }
 .card .front img{
     width: 70%;
@@ -127,7 +128,8 @@ body{
     transform: perspective(600px) rotateY(180deg);
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
 }
 
 .card .back img{
