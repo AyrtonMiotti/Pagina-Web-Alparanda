@@ -2,6 +2,11 @@
     margin: 0;
 }
 
+body{
+    width: 100vh;
+    height: 100%;
+}
+
 .nabvar{
     background-color: #0BBCB4;
     display: flex;
@@ -96,10 +101,21 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100%;
+}
+
+.card .face{
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: 1.5s;
 }
 
 .card .front{
-    transform: perspective(600%) rotateY(0deg);
+    transform: perspective(600px) rotateY(0deg);
     /*display: flex;
     flex-direction: column;
     justify-content: space-between;*/
@@ -108,7 +124,7 @@
     width: 70%;
 }
 .card .back{
-    transform: perspective(600%) rotate(180deg);
+    transform: perspective(600px) rotateY(180deg);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -116,4 +132,12 @@
 
 .card .back img{
     width: 70%;
+}
+
+.card:hover .front{
+    transform: perspective(600px) rotateY(180deg);
+}
+
+.card:hover .back{
+    transform: perspective(600px) rotateY(360deg);
 }
