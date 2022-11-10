@@ -175,6 +175,6 @@ body{
     position: absolute;
 }
 
-.select:hover{
-    
+.select button:hover{
+    color: red;
 }
