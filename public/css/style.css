@@ -1,5 +1,6 @@
 *{
     margin: 0;
+    padding: 0;
 }
 
 body{
@@ -96,14 +97,14 @@ body{
 }
 
 /*---------------------CHARACTERS------------------------*/
-body{
+/*body{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
     background: rgb(9, 74, 136);
-}
+}*/
 
 .mainContainer{
     display: flex;
@@ -177,4 +178,15 @@ body{
 
 .select button:hover{
     color: red;
+}
+
+/*-----------------------------------------JUEGOS------------------------------------------*/
+
+.nabvar2{
+    background-color: #0BBCB4;
+    display: flex;
+    justify-content: center;
+    width: 100vh;
+    margin: 0;
+    padding: 0;
 }
