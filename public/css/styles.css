@@ -1,0 +1,237 @@
+*{
+    margin: 0;
+}
+
+:root{
+    --generalColor: #6C6B6B;
+
+    /*Tiburón*/
+    --bgShark-color: #0BBCB4;
+    --bgShark: #CBE3E2;
+
+    /*Nutria*/
+    --bgOtter-color: #C38C70;
+    --bgOtter: #d3b09f;
+
+    /*Pulpo*/
+    --bgOctopus-color: #F46E81;
+    --bgOctopus: #eea5b0;
+
+    /*Foca*/
+    --bgSeal-color: #A2BBE0;
+    --bgSeal: #b9c8df;
+
+}
+
+/* PAGE 1 */
+
+/*________________________________________________GENERAL________________________________________________*/
+.nabvar{
+    background-color: var(--bgShark-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    font-family: 'Jua', sans-serif;
+    color: #fff;
+    font-size:xx-large;
+}
+
+.second-container{
+    display: flex;
+    justify-content: space-around;
+}
+
+/*_________________________________________________LEFT___________________________________________________*/
+.left-container{
+    width: 100%;
+    height: auto;
+}
+
+.leftUp-container{
+    /*display: flex;
+    align-content: flex-start;
+    justify-content: right;
+    align-items: flex-end;*/
+    width: 100%;
+    height: 50%;
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 5px;
+}
+
+.leftBottom-container{
+    background-color: var(--bgShark-color);
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: space-around;
+}
+
+.text{
+    display: flex;
+    width: 17%;
+    height: 13%;
+    border: var(--generalColor) 1px solid;
+    color: var(--generalColor);
+    font-family: 'Jua', sans-serif;
+    align-items: center;
+    justify-content: center;
+    align-content: baseline;
+    margin: 5%;
+    border-radius: 50px;
+}
+
+.leftBottom-container a{
+    background: #fff;
+    width: 24%;
+    height: 17%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2%;
+    border-radius: 50px;
+    cursor: pointer;
+    font-family: 'Jua', sans-serif;
+    font-size: larger;
+    text-align: center;
+    text-decoration: none;
+}
+
+.txtBtn{
+    background: #fff;
+    width: 24%;
+    height: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2%;
+    border-radius: 50px;
+    cursor: pointer;
+    font-family: 'Jua', sans-serif;
+    font-size: larger;
+    text-align: center;
+}
+
+.txtBtn2{   
+    width: 100%;
+    height: 100%;
+    font-size: 19px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-family: 'Jua', sans-serif;
+    outline: none;
+    border-color: #0BBCB4;
+    z-index: 0;
+
+}
+
+.full-chat-block {
+    text-align: center;
+    overflow: auto;
+    scrollbar-width: none;
+    height: auto;
+    transition: max-height 0.2s ease-out;
+    width: 100%;
+    max-height: 522px;
+}
+
+/*_________________________________________________RIGHT_________________________________________________*/
+.right-container{
+    background-color: var(--bgShark);
+    width: 100%;
+    height: 90vh;
+    display: flex;
+}
+
+.containerImage{
+    display: flex;
+    align-items: center;
+    align-content: center;
+}
+
+.image{
+    margin-left: 20%;
+}
+
+
+/*--------*/
+.botText{
+    text-align: left;
+    font-family: Helvetica;
+    font-size: 16px;
+    font-weight: normal;
+}
+.botText span{
+    line-height: 1.5em;
+    display: inline-block;
+    background: #444;
+    padding: 10px;
+    border-radius: 8px;
+    border-bottom-left-radius: 2px;
+    max-width: 80%;
+    margin-left: 10px;
+    /*animation: floatUp 5s forwards;*/
+    
+}
+
+.userText{
+    color: black;
+    font-family: Helvetica;
+    font-size: 16px;
+    font-weight: normal;
+    text-align: right;
+    clear: both;
+    margin-right: 5px;
+}
+
+.userText span{
+    line-height: 1.5em;
+    display: inline-block;
+    background: #777;
+    padding: 10px;
+    border-radius: 8px;
+    border-bottom-right-radius: 2px;
+    max-width: 80%;
+    margin-left: 10px;
+    /*animation: floatUp 5s forwards;*/
+}
+
+.chat-container{
+    max-height: 281px;
+    height: auto;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    scroll-behavior: smooth;
+    hyphens: auto;
+}
+
+#chatbox{
+    max-height: 522px;
+    height: auto;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    scroll-behavior: smooth;
+    hyphens: auto;
+    overflow: revert;
+}
+
+@keyframes floatUp{
+    from{
+        transform: translateY(30px);
+        opacity: .0;
+    }
+    to{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+
+.outer-container{
+    max-height: 522px;
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Cards-Styles.css">
+    <title>El juego de la memoria</title>
+</head>
+<body>
+    <div id="g"></div>
+    <div class="logo">
+    <p class="info">Clickeá la P para jugar</p>
+    <div class="card left">
+        <div class="flipper">
+        <div class="f c1">F</div>
+        <div class="b contentbox" id="stats">
+            <div class="padded">
+            <h2>Figuras</h2>
+            Parece que aún no haz volteado ninguna carta.
+            <a href="javascript:;" class="playnow">Jugar</a>
+            </div>
+        </div>
+        </div>
+    </div>
+    <div class="card active twist">
+        <div class="flipper">
+        <div class="b f">
+            <div class="c2">L</div>
+        </div>
+        </div>
+    </div>
+    <div class="card left">
+        <div class="flipper">
+        <div class="f c3">I</div>
+        <div class="b contentbox instructions">
+            <div class="padded">
+            <h2>Instrucciones</h2>
+            <p>Precione [p] para pausar, o [ESC] para abandonar el juego.</p>
+            <p>Flip es un juego de memoria con cartas, por tiempo. Hacé click en las cartas verdes para ver que símbolo esconden e intentá encontrar el símbolo correspondiente debajo de las otras cartas.</p>
+            <p>Descubrí dos símbolos iguales a la vez para eliminarlos del juego.</p>
+            <p>Eliminá todas las cartas lo más rápido que puedas para ganar el juego. ¡Que tengas un divertido FLIPing!</p>
+            </div>
+        </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="flipper">
+        <div class="f c4">P</div>
+        <div class="b contentbox levels">
+            <a href="javascript:;" data-level="8" class="play">Casual</a>
+            <a href="javascript:;" data-level="18" class="play">Medium</a>
+            <a href="javascript:;" data-level="32" class="play">Hard</a>
+        </div>
+        </div>
+    </div>
+
+    <p class="info"></p>
+    </div>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="Cards-Scripts.js"></script>
+</body>
+</html>
+
+
+<!--
+README!
+
+GAME INSRUCTIONS:
+
+p    - pause
+ESC  - abandon game
+
+Click the big P to choose one of three levels:
+- Casual
+- Medium
+- Hard
+
+The game will save your stats locally, via localStorage.
+Click the F to see your stats.
+
+Click I for these intructions.
+
+Flip is a timed card memory game. When starting a level, there's a red bar on top of the screen that shows how much time you have left.
+Click the green cards to see what symbol they uncover and try to find the matching symbol underneath the other cards.
+Uncover two matching symbols in a row to eliminate them from the game.
+Eliminate all cards as fast as you can to win the game. Have fun FLIPing!
+-->
+
+
