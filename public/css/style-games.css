@@ -54,6 +54,14 @@
     margin-top: 35px;
 }
 
+.divC{
+    opacity: .5;
+}
+
+.GeneralDiv{
+    cursor: pointer;
+}
+
 /*-------------------------------------- HOME ------------------------------------------*/
 
 .main-container{
@@ -92,7 +100,7 @@
     justify-content: space-around;
 }
 
-.right-container2 input{
+.right-container2 .button{
     background-color: #C48C70;
     border: #C48C70;
     box-shadow: 4px 6px 4px #A26647;
@@ -104,6 +112,15 @@
     color: #FFFFFF;
     font-size: 30px;
     font-weight:bold;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right-container2 .button a{
+    text-decoration: none;
+    color: #FFFFFF;
 }
 
 .frame{
@@ -123,6 +140,7 @@
 .main-container-shark{
     display: flex;
     flex-direction: column;
+    height: 100vh;
 }
 
 .navbar{
@@ -147,13 +165,14 @@
 
 .menu{
     margin-right: 2%;
+    opacity: .5;
 }
 
 
 .center-container{
     background-color: #CBE3E2;
     width: 100%;
-    height: 75vh;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOME</title>
+    <link rel="stylesheet" href="resources/css/style-games.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="main-container">
+        <div class="left-container">
+            <div class="text1"><h3>¡BIENVENIDO A YÖSAI!</h3></div>
+            <div class="text2"><p>Una aplicación de <b>apoyo emocional</b> para quien lo necesite</p></div>
+        </div>
+        <div class="right-container2">
+            <div class="frame"><img src="resources/assets/Group 22.png" alt=""></div>
+            <div class="button"><a href="/next_home">COMENZAR</a></div>
+        </div>
+    </div>
+
+    <% if(typeof user != "undefined") { %>
+        <script>
+            console.log('<%= user %>');
+            </script>
+    <% } %>
+</body>
+
+</html>

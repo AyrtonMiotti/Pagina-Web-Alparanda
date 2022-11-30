@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <!-- Configuration -->
+    <link rel="stylesheet" href="resources/css/Lstyle.css">
+    <title>Login</title>
+</head>
+<body>
+    <div class="main">
+        <div class="container a-container" id="a-container">
+            <div class="logo-icon">
+                <img src="resources/assets/logo.png" alt="Yösai">
+            </div>
+            <form action="" class="form" id="a-form" method="post">
+                <h2 class="form_title title">Crear un cuenta</h2>
+                <div class="form_icons"></div>
+                <span class="form_span">¡Bienvenido a <b class="yosai-bold">Yösai</b>!</span>
+
+                <div class="user-group">
+                    <br><span class="userA">Usuario:</span><br>
+                    <div class="inputA">
+                        <input type="text" name="new_user" id="form_input" class="form_input" placeholder="Usuario">
+                    </div>
+                </div>
+                <div class="passGroup">
+                    <br><span class="passA">Contraseña:</span><br>
+                    <input type="password" name="new_pass" id="form_input" class="form_input" placeholder="Contraseña">
+                </div>
+                <div class="SpassGroup">
+                    <br><span class="SpassA">Repetir Contraseña:</span><br>
+                    <input type="password" name="new_pass" id="form_input" class="form_input" placeholder="Contraseña">
+                </div>
+
+                <button class="form_button button submit">Registrarse</button>
+            </form>
+            <!-- Final del Formulario Registro-->
+        </div>
+
+        <div class="container b-container" id="b-container">
+            <div class="logo-icon">
+                <img src="resources/assets/logo.png" alt="Yösai">
+            </div>
+            <form action="/logIn" method="post" class="form" id="b-form">
+                <h2 class="form_title title">Inicia Sesión</h2>
+                <div class="form_icons"></div>
+                <input type="text" name="user" id="form_input" class="form_input" placeholder="Usuario">
+                <input type="password" name="pass" id="form_input" class="form_input" placeholder="Contraseña">
+                <a href="" class="form_link">¿Olvidaste tu contraseña?</a>
+                <button class="form_button button submit" type="submit">Iniciar Sesión</button>
+                
+            </form>
+            <!-- Final del Formulario Login-->
+        </div>
+
+        <div class="switch" id="switch-cnt">
+            <div class="switch_circle"></div>
+            <div class="switch_circle switch_circle-t"></div>
+            <div class="switch_container" id="switch-c1">
+                <h2 class="switch_title title">¡Bienvenido de vuelta!</h2>
+                <p class="switch_description description">
+                    Para mantenerse conectado con nosotros por favor,<b> ingresá</b> con cuenta personal.
+                </p>
+                <button class="switch-button button switch-btn">Iniciar Sesión</button>
+            </div>
+            <div class="switch_container is-hidden" id="switch-c2">
+                <h2 class="switch_title title">¿Sos Nuev@?</h2>
+                <p class="switch_description description">
+                    <b>Ingresá</b> tus detalles personales y <br><b>¡Empezá a disfrutar con nosotros!</b>
+                </p>
+                <button class="switch-button button switch-btn">Registrarse</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        let switchCtn = document.querySelector('#switch-cnt');
+        let switchC1 = document.querySelector('#switch-c1');
+        let switchC2 = document.querySelector('#switch-c2');
+        let switchCircle = document.querySelectorAll('.switch_circle');
+        let switchBtn = document.querySelectorAll('.switch-btn');
+        let aContainer = document.querySelector('#a-container');
+        let bContainer = document.querySelector('#b-container');
+        let allButtons= document.querySelectorAll('.submit');
+
+        let getButtons = (e) => e.preventDefault()
+
+        let changeForm = (e) => {
+            switchCtn.classList.add('is-gx');
+            setTimeout(function(){
+                switchCtn.classList.remove('is-gx')
+            }, 1500)
+
+            switchCtn.classList.toggle('is-txr');
+            switchCircle[0].classList.toggle('is-txr');
+            switchCircle[1].classList.toggle('is-txr');
+
+            switchC1.classList.toggle('is-hidden');
+            switchC2.classList.toggle('is-hidden');
+            aContainer.classList.toggle('is-txl');
+            bContainer.classList.toggle('is-txl');
+            bContainer.classList.toggle('is-z200');
+        }
+
+        let mainF = (e) => {
+            /*for(var i = 0; i < allButtons.length; i++){allButtons[i].addEventListener('click', getButtons);}
+            */
+            for(var i = 0; i < switchBtn.length; i++){
+                switchBtn[i].addEventListener('click', changeForm);
+            }
+        }
+
+        window.addEventListener('load', mainF);
+    </script>
+
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="resources/Js/particles.js"></script>
+
+    <% if(typeof alert != "undefined") { %>
+    <script>
+        Swal.fire({
+        title: '<%= alertTitle %>',
+        text: '<%= alertMessage %>',
+        icon: '<%= alertIcon %>',
+        showConfirmButton: '<=% showConfirmButton %>',
+        timer: '<%= timer %>'
+        }).then(()=>{
+        window.location='/<%=ruta %>'
+        })
+    </script>
+    <% } %>
+</body>
+</html>

@@ -5,6 +5,7 @@
     padding: 0;
     box-sizing: border-box;
     user-select: none;
+    font-family: 'Inter', sans-serif;
 }
 
 :root{
@@ -43,6 +44,7 @@ body{
     box-shadow: var(--boxSh);
     border-radius: var(--borderR);
     overflow: hidden;
+    margin-top: 10px;
 }
 
 @media (max-width: 1200px){
@@ -69,7 +71,7 @@ body{
     width: 600px;
     height: 100%;
     padding: 25px;
-    background-color: var();
+    background-color: #ecf0f3; /*Change Later*/
     transition: 1.25s;
 }
 
@@ -82,7 +84,11 @@ body{
     height: 100%;
 }
 
-.form_icon{
+.yosai-bold{
+    letter-spacing: 2px;
+}
+
+.form_icons{
     object-fit: contain;
     width: 30px;
     margin: 0 5px;
@@ -90,7 +96,7 @@ body{
     transition: 0.15s;
 }
 
-.form_icon:hover{
+.form_icons:hover{
     opacity: 1;
     transition: 0.15s;
     cursor: pointer;
@@ -106,7 +112,7 @@ body{
     border: none;
     outline:none;
     border-radius: 8px;
-    background-color: var();
+    background-color: var(--bg-Input-color); /*Change Later*/
     box-shadow: inset 2px 2px 4px #d1d9e6, inset-2px -2px 4px #f9f9f9;
 }
 
@@ -115,11 +121,13 @@ body{
 }
 
 .form_span{
-    margin-top: 30px;
-    margin-bottom: 12px;
+    margin-top: 0px;
+    margin-bottom: 30px;
+    font-size: 20px;
 }
 
 .form_link{
+    text-decoration: none;
     color: #181818;
     font-size: 15px;
     line-height: 2;
@@ -130,9 +138,17 @@ body{
 .title{
     font-size: 34px;
     letter-spacing: 0.25px;
+    line-height: 2;
+    color: #181818;
+}
+
+.switch_container .title{
+    font-size: 27px;
+    letter-spacing: 0.25px;
     line-height: 3;
     color: #181818;
 }
+
 
 .description{
     font-size: 14px;
@@ -142,8 +158,8 @@ body{
 }
 
 .button{
-    width: 100px;
-    height: 50px;
+    width: auto;
+    height: 40px;
     border-radius: 25px;
     margin-top: 50px;
     font-weight: 700;
@@ -154,16 +170,32 @@ body{
     border: none;
     outline: none;
     box-shadow: 8px 8px 16px #d1d9e6, -8px -8px 16px #f9f9f9;
+    padding: 0px 8px;
+    cursor: pointer;
+}
+
+.logo-icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .a-container{
     z-index: 100;
-    left: calc(100%-600px);
+    left: calc(100% - 600px);
+    flex-direction: column;
+}
+
+.a-container .form .button{
+    margin-top: 30px;
+    margin-bottom: 20px;
+    height: 39px;
 }
 
 .b-container{
+    left: calc(100% - 600px);
     z-index: 0;
-    left: calc(100%-600px);
+    flex-direction: column;
 }
 
 .switch{
@@ -254,7 +286,7 @@ body{
     transition: 1.25s;
 }
 
-is-gx{
+.is-gx{
     animation: is-gx 1.25s;
 }
 

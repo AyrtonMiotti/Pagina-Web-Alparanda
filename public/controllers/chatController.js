@@ -1,5 +1,5 @@
 const Chatcontroller = {};
-const ChatConnection = require('../database/dbChat');
+const ChatConnection = require('../databases/dbChat');
 
 var OptionsButtons = [];
 var DialogCharacter = [];

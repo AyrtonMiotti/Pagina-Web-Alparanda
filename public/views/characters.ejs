@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PERSONAJES</title>
+    <link rel="stylesheet" href="resources/css/style-components.css">
+    <link rel="stylesheet" href="resources/css/style-cards.css">
+</head>
+<body>
+    <div class="navbar">
+        <img src="resources/assets/Vector.png" alt="">
+        <h2 class="navTitle">Personajes</h2>
+        <div class="menubar">
+            <img class="menuIcon" src="resources/assets/MenuIcon.png" alt="">
+            <h2 class="MenuTitle">Menú</h2>
+    
+            <ul class="menuUl">
+                <li class="menuLi"><a href="">Chat</a></li>
+                <li class="menuLi"><a href="">Tienda</a></li>
+                <li class="menuLi"><a href="">Juegos</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="mainContainer">
+        <div class="card-container">
+            <div class="card">
+                <div class="face front">
+                    <img src="resources/assets/Card Foca principal.png" alt="">
+                </div>
+                <div class="face back">
+                    <img src="resources/assets/Card Foca.png" alt="">
+                    <input class="select" type="button"><a href="/characters-Shark">SELECCIONAR</a></div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="face front">
+                    <img src="resources/assets/Card Foca principal.png" alt="">
+                </div>
+                <div class="face back">
+                    <img src="resources/assets/Card Foca.png" alt="">
+                    <input class="select" type="button"><a href="/characters-Otter">SELECCIONAR</a></div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="face front">
+                    <img src="resources/assets/Card Foca principal.png" alt="">
+                </div>
+                <div class="face back">
+                    <img src="resources/assets/Card Foca.png" alt="">
+                    <input class="select" type="button"><a href="/characters-Octopus">SELECCIONAR</a></div>
+                </div>
+            </div>
+
+            <div class="card card-bottom">
+                <div class="face front">
+                    <img src="resources/assets/Card Foca principal.png" alt="">
+                </div>
+                <div class="face back">
+                    <img src="resources/assets/Card Foca.png" alt="">
+                    <input class="select" type="button"><a href="/characters-Seal">SELECCIONAR</a></div>
+                </div>
+            </div>
+
+            <div class="card card-bottom">
+                <div class="face front">
+                    <img src="resources/assets/Card Foca principal.png" alt="">
+                </div>
+                <div class="face back">
+                    <img src="resources/assets/Card Foca.png" alt="">
+                    <input class="select" type="button"><a href="/">SELECCIONAR</a></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script>
+        let switchCtn = document.querySelector('#switch-cnt');
+        let switchC1 = document.querySelector('#switch-c1');
+        let switchC2 = document.querySelector('#switch-c2');
+        let switchCircle = document.querySelectorAll('.switch_circle');
+        let switchBtn = document.querySelectorAll('.switch-btn');
+        let aContainer = document.querySelector('#a-container');
+        let bContainer = document.querySelector('#b-container');
+        let allButtons= document.querySelectorAll('.submit');
+
+        let getButtons = (e) => e.preventDefault()
+
+        let changeForm = (e) => {
+            switchCtn.classList.add('is-gx');
+            setTimeout(function(){
+                switchCtn.classList.remove('is-gx')
+            }, 1500)
+
+            switchCtn.classList.toggle('is-txr');
+            switchCircle[0].classList.toggle('is-txr');
+            switchCircle[1].classList.toggle('is-txr');
+
+            switchC1.classList.toggle('is-hidden');
+            switchC2.classList.toggle('is-hidden');
+            aContainer.classList.toggle('is-txl');
+            bContainer.classList.toggle('is-txl');
+            bContainer.classList.toggle('is-z200');
+        }
+
+        let mainF = (e) => {
+            for(var i = 0; i < allButtons.length; i++){
+                allButtons[i].addEventListener('click', getButtons);
+            }
+            for(var i = 0; i < switchBtn.length; i++){
+                switchBtn[i].addEventListener('click', changeForm);
+            }
+        }
+
+        window.addEventListener('load', mainF);
+    </script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <% if(typeof alert != "undefined") { %>
+        <script>
+            Swal.fire({
+            title: '<%= alertTitle %>',
+            text: '<%= alertMessage %>',
+            icon: '<%= alertIcon %>',
+            showConfirmButton: '<=% showConfirmButton %>',
+            timer: '<%= timer %>'
+            }).then(()=>{
+            window.location='/<%=ruta %>'
+            })
+        </script>
+    <% } %>
+</body>
+</html>

@@ -1,5 +1,5 @@
 const controller = {};
-const connection = require('../database/db');
+const connection = require('../databases/db');
 
 //____________________________PARTICIPANTES____________________________
 
@@ -16,6 +16,7 @@ controller.showParticipants = (req, res) => {
 
 //SORTEAR || RAFFLE
 controller.raffle = (req, res) => {
+
     connection.query('SELECT * FROM participantes WHERE DNI >= RAND() * ( SELECT MAX(DNI) FROM participantes ) ORDER BY DNI LIMIT 5;', (error, results) => {
         if (error) {
             res.json(error);
