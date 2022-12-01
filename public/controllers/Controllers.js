@@ -57,8 +57,8 @@ controller.selectCharacter1 = (req, res) =>{
         const newCharID = 1;
 
         connection.query('SELECT characterID FROM USERS WHERE user_id = ?;', [user], (error, results) =>{
-            console.log("RRRRRRRRRRESSSSSSSSULTS: " + results[0].characterID)
-            console.log(character)
+            console.log("ID Personaje Anterior: " + character);
+            console.log("ID Personaje Actual: " + results[0].characterID)
 
             if(results[0].characterID == newCharID){
                 return res.render('characters', {
@@ -121,7 +121,6 @@ controller.selectCharacter2 = (req, res) =>{
         const newCharID = 2;
 
         connection.query('SELECT characterID FROM USERS WHERE user_id = ?;', [user], (error, results) =>{
-            console.log(results)
             if(results[0].characterID == newCharID){
                 return res.render('characters', {
                     alert: true,
@@ -183,8 +182,7 @@ controller.selectCharacter3 = (req, res) =>{
         const newCharID = 3;
 
         connection.query('SELECT characterID FROM USERS WHERE user_id = ?;', [user], (error, results) =>{
-            console.log(results)
-                        if(results[0].characterID == newCharID){
+            if(results[0].characterID == newCharID){
                 return res.render('characters', {
                     alert: true,
                     alertTitle: "Error",
