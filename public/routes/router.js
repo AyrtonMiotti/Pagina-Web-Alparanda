@@ -18,10 +18,12 @@ router.get('/next_home', (req, res)=>{
 })
 
 router.get('/shop', (req, res)=>{
-    return res.render('characters');
+    return res.render('Shark-Characters');
 })
 
-
+router.get('/player', (req, res)=>{
+    return res.render('musicPlayer');
+})
 
 
 // Functions

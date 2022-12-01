@@ -8,12 +8,14 @@ let next_btn = document.querySelector(".next-track");
 let prev_btn = document.querySelector(".prev-track");
 
 let seek_slider = document.querySelector(".seek_slider");
-let volume = document.querySelector(".volume_slider");
+let volume_slider = document.querySelector(".volume_slider");
 let curr_time = document.querySelector(".current-time");
 let total_duration = document.querySelector(".total-duration");
 let wave = document.getElementById("wave");
 let randomIcon = document.querySelector(".fa-random");
 let curr_track = document.createElement('audio');
+
+let VolumeIcon = document.querySelector('.fa-volume-up')
 
 let track_index = 0;
 let isPlaying = false;
@@ -22,28 +24,34 @@ let updateTimer;
 
 const music_list = [
     {
-        img: '../02-Papelera/amiga.jpg',
+        img: 'resources/assets/playerAssets/amiga.jpg',
         name: 'Amiga',
         artist: 'Lucas Sugo',
-        music: '../02-Papelera/Lucas Sugo - Amiga.mp3'
+        music: 'resources/assets/playerAssets/Lucas Sugo - Amiga.mp3'
     },
     {
-        img: '../02-Papelera/morat1.jpg',
+        img: 'resources/assets/playerAssets/morat1.jpg',
         name: 'Besos en Guerra',
         artist: 'Morat',
-        music: '../02-Papelera/Besos-en-guerra.mp3'
+        music: 'resources/assets/playerAssets/Besos-en-guerra.mp3'
     },
     {
-        img: '../02-Papelera/sabras.jpg',
+        img: 'resources/assets/playerAssets/sabras.jpg',
         name: 'Sabrás',
         artist: 'Dj Khalid X Manny Rod X Fran Santos',
-        music: '../02-Papelera/Sabrás.mp3'
+        music: 'resources/assets/playerAssets/Sabrás.mp3'
     },
     {
-        img: '../02-Papelera/correcta.jpg',
+        img: 'resources/assets/playerAssets/correcta.jpg',
         name: 'La Correcta',
         artist: 'Morat y Nabález',
-        music: '../02-Papelera/La Correcta.mp3'
+        music: 'resources/assets/playerAssets/La Correcta.mp3'
+    },
+    {
+        img: 'resources/assets/playerAssets/moratVe.jpg',
+        name: 'Cuando Nadie Ve',
+        artist: 'Morat',
+        music: 'resources/assets/playerAssets/Cuando Nadie Ve.mp3'
     }
 ];
 
@@ -84,7 +92,7 @@ function random_bg_color(){
     var angle = 'to right';
 
     let gradient = 'linear-gradient(' + angle + ',' + Color1 + ',' + Color2 + ')';
-    document.body.style.background = gradient;
+    document.body.style.background = gradient;    
 }
 
 function reset(){
@@ -133,12 +141,21 @@ function pauseTrack(){
     playpause_btn.innerHTML = '<i class="fa fa-play-circle fa-5x"></i>';
 }
 
+let old_random_index = 0;
+
 function nextTrack(){
     if(track_index < music_list.length -1 && isRandom === false){
         track_index += 1;
     }else if(track_index < music_list.length - 1 && isRandom === true){
-        let random_index = Number.parseInt(Math.random() + music_list.length);
+        let random_index = Math.floor(Math.random() * (music_list.length));
+        while(old_random_index == random_index){
+             random_index = Math.floor(Math.random() * (music_list.length));
+        }
+        old_random_index = random_index;
+        //let random_index2 = Number.parseInt(Math.random() * (music_list.length));
+        console.log("Numero random: " + random_index)
         track_index = random_index;
+        console.log("Index " + track_index);        
     }else{
         track_index = 0;
     }
@@ -157,8 +174,10 @@ function prevTrack(){
 }
 
 function seekTo(){
+    pauseTrack();
     let seekto = curr_track.duration * (seek_slider.value / 100);
     curr_track.currentTime = seekto;
+    return playTrack();
 }
 
 function setVolume(){
@@ -183,6 +202,38 @@ function setUpdate(){
 
         curr_time.textContent = currentMinutes + ":" + currentSeconds;
         total_duration.textContent = durationMinutes + ":" + durationSeconds;
-
     }
+}
+
+
+function setNewIcon(){
+    if(volume_slider.value <= 50){
+        VolumeIcon.classList.add('fa-volume-down');
+        VolumeIcon.classList.remove('fa-volume-up');
+        VolumeIcon.classList.remove('fa-volume-mute');
+    }
+    if(volume_slider.value == 1){
+        VolumeIcon.classList.add('fa-volume-mute');
+        VolumeIcon.classList.remove('fa-volume-up');
+        VolumeIcon.classList.remove('fa-volume-down');
+        
+    }
+    if(volume_slider.value > 50){
+        VolumeIcon.classList.add('fa-volume-up');
+        VolumeIcon.classList.remove('fa-volume-down');
+        VolumeIcon.classList.remove('fa-volume-mute');
+    }
+}
+
+
+function MaxVolume(){
+    curr_track.volume = 1;  
+    volume_slider.value = "100";
+    setNewIcon();
+}
+
+function MinVolume(){
+    curr_track.volume = 0;  
+    volume_slider.value = "0";
+    setNewIcon();
 }

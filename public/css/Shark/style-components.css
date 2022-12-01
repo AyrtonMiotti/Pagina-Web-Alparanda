@@ -6,7 +6,6 @@
     padding: 0;
     box-sizing: border-box;
     user-select: none;
-    font-family: 'Inter', sans-serif;
 }
 
 /*NAVBAR*/
@@ -22,6 +21,7 @@
     position: fixed;
     z-index: 2;
     top: 0;
+    font-family: 'Inter', sans-serif;
 }
 
 .menuIcon{

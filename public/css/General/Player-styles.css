@@ -296,10 +296,16 @@ i.fa-step-backward{
     width: 30%;
     height: 100vh;
 
-    background-color: #0D9B95; /* rgba(5, 33, 51, .98);*/
     margin-top: auto;
     opacity: 1;
     border-left: 1px solid black;
+    /* From https://css.glass */
+    background: rgba(0, 0, 0, 0.43);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(19.5px);
+    -webkit-backdrop-filter: blur(19.5px);
+    border: 1px solid rgba(0, 0, 0, 0.47);
 }
 
 .menubar:hover h2{
