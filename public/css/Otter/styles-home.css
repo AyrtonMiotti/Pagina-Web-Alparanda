@@ -1,0 +1,143 @@
+/*-----------------------------------------JUEGOS------------------------------------------*/
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --generalColor: #6C6B6B;
+
+    /*Tiburón*/
+    --bgShark-color: var(--bgOtter-color);
+    --bgShark: var(--bgOtter);
+
+    /*Nutria*/
+    --bgOtter-color: #C38C70;
+    --bgOtter: #d3b09f;
+
+    /*Pulpo*/
+    --bgOctopus-color: #F46E81;
+    --bgOctopus: #eea5b0;
+
+    /*Foca*/
+    --bgSeal-color: #A2BBE0;
+    --bgSeal: #b9c8df;
+
+}
+
+
+.nabvar2{
+    background-color: var(--bgOtter-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 10vh;
+    font-family: 'Jua', sans-serif;
+    color: #fff;
+    font-size:xx-large;
+}
+
+.center{
+    background-color: #fff;
+    display: flex;
+    height: 77vh;
+
+}
+
+
+.botones{
+    display: flex;
+    background-color: var(--bgOtter-color);
+    height: 13vh;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.parent {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    margin-top: 35px;
+    }
+    
+    .div1 { grid-area: 2 / 2 / 3 / 3; }
+    .div2 { grid-area: 2 / 4 / 3 / 5; }
+    .div3 { grid-area: 2 / 6 / 3 / 7; }
+    .div4 { grid-area: 2 / 8 / 3 / 9; }
+    .div5 { grid-area: 4 / 3 / 5 / 4; }
+    .div6 { grid-area: 4 / 5 / 5 / 6; }
+    .div7 { grid-area: 4 / 7 / 5 / 8; }
+
+.div7{
+    margin-top: 35px;
+}
+
+.divC{
+    opacity: .5;
+}
+
+.GeneralDiv{
+    cursor: pointer;
+}
+
+
+/*--------------------------------------- HOME SHARK ----------------------------------*/
+
+
+.main-container-shark{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.navbar{
+    background: var(--bgOtter-color);
+    width: 100%;
+    height: 11vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.text{
+    font-family: 'Jua', sans-serif;
+    font-size: 30px;
+    color: rgba(7, 33, 102, 0.45);
+}
+
+.home{
+    margin-left: 2%;
+}
+
+.menu{
+    margin-right: 2%;
+    opacity: .5;
+}
+
+
+.center-container{
+    background-color: var(--bgOtter);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-below{
+    background-color: var(--bgOtter-color);
+    width: 100%;
+    height: 14vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+/* 
+color: rgba(7, 33, 102, 0.45); 
+*/

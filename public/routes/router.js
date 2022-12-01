@@ -33,4 +33,16 @@ router.get('/characters-Otter', partController.selectCharacter2);
 router.get('/characters-Octopus', partController.selectCharacter3);
 router.get('/characters-Seal', partController.selectCharacter4);
 
+
+// ------------- SHARK ROUTES -------------
+router.get('/sHome', (req, res)=>{
+    return res.render('Shark-Home');
+})
+
+router.get('/sGames', (req, res)=>{
+    return res.render('Shark-Games');
+})
+
+
+
 module.exports = router;
