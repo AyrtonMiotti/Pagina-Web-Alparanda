@@ -1,0 +1,154 @@
+:root{
+    --generalColor: #6C6B6B;
+
+    /*Tiburón*/
+    --bgShark-color: #0BBCB4;
+    --bgShark: #CBE3E2;
+
+    /*Nutria*/
+    --bgOtter-color: #C38C70;
+    --bgOtter: #d3b09f;
+
+    /*Pulpo*/
+    --bgOctopus-color: #F46E81;
+    --bgOctopus: #eea5b0;
+
+    /*Foca*/
+    --bgSeal-color: #A2BBE0;
+    --bgSeal: #b9c8df;
+
+}
+
+/*GENERAL*/
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+/*NAVBAR*/
+.navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 40px;
+    height: 60px;
+    width: 100%;
+    background: #0BBCB4;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+.menuIcon{
+    width: 70px;
+    height: 70px;
+}
+
+/*MENU LATERAL DESPLEGABLE*/
+.menubar{
+    width: 10%;
+    text-decoration: none;
+    z-index: 3;
+    margin-top: auto;
+    transition: .4s all;
+    
+}
+
+.menubar ul{
+    padding: 0px;
+    text-align: center;
+}
+
+.menubar li{
+    transition: .3s all;
+    list-style: none;
+}
+
+.menubar a{
+    text-decoration: none;
+    list-style: none;
+
+    transition: .3s all;
+    font-size: 0px;
+    padding: 0px;
+    font-family: 'Inter', sans-serif;
+    font-family: 'Jua', sans-serif;
+}
+
+.menubar h2{
+    text-align: center;
+    color: #fff;
+    padding: 7px;
+    padding-bottom: 7px;
+    font-size: 0px;
+}
+
+.navTitle{
+    font-family: 'Inter', sans-serif;
+    font-family: 'Jua', sans-serif;
+    color: rgba(7, 33, 102, .5)
+}
+
+.menubar:hover{
+    width: 50%;
+    height: 100vh;
+
+    background-color: #0D9B95; /* rgba(5, 33, 51, .98);*/
+    margin-top: auto;
+}
+
+.menubar:hover h2{
+    padding: 15px;
+    font-size: 40px;
+}
+
+.menubar:hover  a{
+    font-size: 30px;
+    color: #fff;
+
+    display: block;
+    padding: 20px;
+}
+
+.menubar:hover img{
+    height: 0px;
+}
+
+.menubar:hover li{
+    border-top: 1px solid black;
+    width: 100%;
+}
+
+.menubar:hover  ul:last-of-type{
+    border-bottom: 1px solid black;
+}
+
+.menubar:hover a:hover{
+    font-size: 25px;
+    padding: 20pxp 0px;
+    background-color: rgba(22, 78, 112, .98);
+}
+
+/*HTML*/
+/* NavBar:
+    <div class="navbar">
+        <img src="../assets/Vector.png" alt="">
+        <h2>Personajes</h2>
+        <div class="menubar">
+            <img class="menuIcon" src="../assets/MenuIcon.png" alt="">
+            <h2 class="MenuTitle">Menú</h2>
+    
+            <ul class="menuUl">
+                <li class="menuLi"><a href="#">Juegos</a></li>
+                <li class="menuLi"><a href="#">Nose 1</a></li>
+                <li class="menuLi"><a href="#">Nose 2</a></li>
+            </ul>
+        </div>
+    </div>
+*/

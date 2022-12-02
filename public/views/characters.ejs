@@ -9,10 +9,10 @@
     <link rel="stylesheet" href="resources/css/Shark/style-cards.css">
 </head>
 <body>
-    <div class="navbar">
+    <div class="navbar-Shark">
         <a href="/next_home"><img src="resources/assets/Vector.png" alt=""></a>
-        <h2 class="navTitle">Personajes</h2>
-        <div class="menubar">
+        <h2 class="navTitle-Shark">Personajes</h2>
+        <div class="menubar-Shark">
             <img class="menuIcon" src="resources/assets/MenuIcon.png" alt="">
             <h2 class="MenuTitle">Menú</h2>
     
@@ -31,7 +31,7 @@
                 </div>
                 <div class="face back">
                     <img src="resources/assets/Card Sharkson.png" alt="">
-                    <input class="select" type="button"><a href="/characters-Shark">SELECCIONAR</a></div>
+                    <input class="select" type="button"><a class="characterOp1" href="/characters-Shark" onclick="SharkConfig()">SELECCIONAR</a></div>
                 </div>
             </div>
 
@@ -41,7 +41,7 @@
                 </div>
                 <div class="face back">
                     <img src="resources/assets/Card Foca-Back.png" alt="">
-                    <input class="select" type="button"><a href="/characters-Shark">SELECCIONAR</a></div>
+                    <input class="select" type="button"><a class="characterOp2" href="/characters-Otter">SELECCIONAR</a></div>
                 </div>
             </div>
 
@@ -51,19 +51,7 @@
                 </div>
                 <div class="face back">
                     <img src="resources/assets/Card Nutria.png" alt="">
-                    <input class="select" type="button"><a href="/characters-Otter">SELECCIONAR</a></div>
-                </div>
-            </div>
-
-
-
-            <div class="card card-bottom">
-                <div class="face front">
-                    <img src="resources/assets/Card Foca principal.png" alt="">
-                </div>
-                <div class="face back">
-                    <img src="resources/assets/Card Foca.png" alt="">
-                    <input class="select" type="button"><a href="/characters-Seal">SELECCIONAR</a></div>
+                    <input class="select" type="button"><a class="characterOp3" href="/characters-Octopus">SELECCIONAR</a></div>
                 </div>
             </div>
 
@@ -73,10 +61,19 @@
                 </div>
                 <div class="face back">
                     <img src="resources/assets/Card Hank-Back.png" alt="">
-                    <input class="select" type="button"><a href="/">SELECCIONAR</a></div>
+                    <input class="select" type="button"><a class="characterOp4" href="/characters-Seal">SELECCIONAR</a></div>
                 </div>
             </div>
 
+            <div class="card card-bottom">
+                <div class="face front">
+                    <img src="resources/assets/Card Foca principal.png" alt="">
+                </div>
+                <div class="face back">
+                    <img src="resources/assets/Card Foca.png" alt="">
+                    <input class="select" type="button"><a class="characterOp5" href="/characters-Seal">SELECCIONAR</a></div>
+                </div>
+            </div>
         </div>
     </div>
     <script>
@@ -134,5 +131,6 @@
             })
         </script>
     <% } %>
+    <script src="resources/js/charactersSelector.js"></script>
 </body>
 </html>

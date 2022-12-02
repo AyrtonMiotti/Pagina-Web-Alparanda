@@ -18,7 +18,7 @@ router.get('/next_home', (req, res)=>{
 })
 
 router.get('/shop', (req, res)=>{
-    return res.render('Shark-Characters');
+    return res.render('characters');
 })
 
 router.get('/player', (req, res)=>{

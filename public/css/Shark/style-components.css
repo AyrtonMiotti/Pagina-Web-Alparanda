@@ -1,118 +1,5 @@
-/*GENERAL*/
-*,
-*::after,
-*::before{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    user-select: none;
-}
+/* ----------------------------- FOCA / SEAL -----------------------------*/
 
-/*NAVBAR*/
-.navbar{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding-left: 40px;
-    height: 60px;
-    width: 100%;
-    background: #0BBCB4;
-    position: fixed;
-    z-index: 2;
-    top: 0;
-    font-family: 'Inter', sans-serif;
-}
-
-.menuIcon{
-    width: 70px;
-    height: 70px;
-}
-
-/*MENU LATERAL DESPLEGABLE*/
-.menubar{
-    width: 10%;
-    text-decoration: none;
-    z-index: 3;
-    margin-top: auto;
-    transition: .4s all;
-    
-}
-
-.menubar ul{
-    padding: 0px;
-    text-align: center;
-}
-
-.menubar li{
-    transition: .3s all;
-    list-style: none;
-}
-
-.menubar a{
-    text-decoration: none;
-    list-style: none;
-
-    transition: .3s all;
-    font-size: 0px;
-    padding: 0px;
-    font-family: 'Inter', sans-serif;
-    font-family: 'Jua', sans-serif;
-}
-
-.menubar h2{
-    text-align: center;
-    color: #fff;
-    padding: 7px;
-    padding-bottom: 7px;
-    font-size: 0px;
-}
-
-.navTitle{
-    font-family: 'Inter', sans-serif;
-    font-family: 'Jua', sans-serif;
-    color: rgba(7, 33, 102, .5)
-}
-
-.menubar:hover{
-    width: 50%;
-    height: 100vh;
-
-    background-color: #0D9B95; /* rgba(5, 33, 51, .98);*/
-    margin-top: auto;
-}
-
-.menubar:hover h2{
-    padding: 15px;
-    font-size: 40px;
-}
-
-.menubar:hover  a{
-    font-size: 30px;
-    color: #fff;
-
-    display: block;
-    padding: 20px;
-}
-
-.menubar:hover img{
-    height: 0px;
-}
-
-.menubar:hover li{
-    border-top: 1px solid black;
-    width: 100%;
-}
-
-.menubar:hover  ul:last-of-type{
-    border-bottom: 1px solid black;
-}
-
-.menubar:hover a:hover{
-    font-size: 25px;
-    padding: 20pxp 0px;
-    background-color: rgba(22, 78, 112, .98);
-}
 
 /*HTML*/
 /* NavBar:
@@ -131,3 +18,474 @@
         </div>
     </div>
 */
+
+
+/*GENERAL*/
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+:root{
+    --generalColor: #6C6B6B;
+
+    /*Tiburón*/
+    --bgShark_color: #0BBCB4;
+    --bgShark: #CBE3E2;
+    --bgMenuShark: #0D9B95;
+    --bgHoverShark: rgba(22, 78, 112, .98);
+    --bgShark3: rgba(7, 33, 102, .5);
+    --Shark-colorText-1: #fff;
+    --Shark-line: #000;
+
+    /*Foca*/
+    --bgSeal_color: #A2BBE0;
+    --bgSeal: #b9c8df;
+    --bgMenuSeal: #9badc9;
+    --bgHoverSeal: rgba(99, 149, 180, 0.98);
+    --bgSeal3: rgba(96, 167, 207, 0.5);
+    --Seal-colorText-1: #fff;
+    --Seal-line: #000;
+
+    /*Nutria*/
+    --bgOtter-color: #C38C70;
+    --bgOtter: #d3b09f;
+
+    /*Pulpo*/
+    --bgOctopus-color: #F46E81;
+    --bgOctopus: #eea5b0;
+
+    /*Foca
+    --bgSeal-color: #A2BBE0;
+    --bgSeal: #b9c8df;
+    */
+}
+
+/*NAVBAR*/
+.navbar-Shark{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 40px;
+    height: 60px;
+    width: 100%;
+    background-color: var(--bgShark_color);
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+.menuIcon{
+    width: 70px;
+    height: 70px;
+}
+
+/*MENU LATERAL DESPLEGABLE*/
+.menubar-Shark{
+    width: 10%;
+    text-decoration: none;
+    z-index: 3;
+    margin-top: auto;
+    transition: .4s all;
+    
+}
+
+.menubar-Shark ul{
+    padding: 0px;
+    text-align: center;
+}
+
+.menubar-Shark li{
+    transition: .3s all;
+    list-style: none;
+}
+
+.menubar-Shark a{
+    text-decoration: none;
+    list-style: none;
+
+    transition: .3s all;
+    font-size: 0px;
+    padding: 0px;
+    font-family: 'Inter', sans-serif;
+    font-family: 'Jua', sans-serif;
+}
+
+.menubar-Shark h2{
+    text-align: center;
+    color: var(--Shark-colorText-1);
+    padding: 7px;
+    padding-bottom: 7px;
+    font-size: 0px;
+}
+
+.navTitle-Shark{
+    font-family: 'Inter', sans-serif;
+    font-family: 'Jua', sans-serif;
+    color: var(--bgShark3);
+}
+
+.menubar-Shark:hover{
+    width: 50%;
+    height: 100vh;
+
+    background-color: var(--bgMenuShark);
+    margin-top: auto;
+}
+
+.menubar-Shark:hover h2{
+    padding: 15px;
+    font-size: 40px;
+}
+
+.menubar-Shark:hover  a{
+    font-size: 30px;
+    color: var(--Shark-colorText-1);;
+    display: block;
+    padding: 20px;
+}
+
+.menubar-Shark:hover img{
+    height: 0px;
+}
+
+.menubar-Shark:hover li{
+    border-top: 1px solid var(--Shark-line);
+    width: 100%;
+}
+
+.menubar-Shark:hover  ul:last-of-type{
+    border-bottom: 1px solid var(--Shark-line);
+}
+
+.menubar-Shark:hover a:hover{
+    font-size: 25px;
+    padding: 20px 0px;
+    background-color: var(--bgHoverShark);
+}
+
+/*FOCA*/
+
+/*NAVBAR*/
+.navbar-Seal{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 40px;
+    height: 60px;
+    width: 100%;
+    background-color: var(--bgSeal_color);
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+.menuIcon{
+    width: 70px;
+    height: 70px;
+}
+
+/*MENU LATERAL DESPLEGABLE*/
+.menubar-Seal{
+    width: 10%;
+    text-decoration: none;
+    z-index: 3;
+    margin-top: auto;
+    transition: .4s all;
+    
+}
+
+.menubar-Seal ul{
+    padding: 0px;
+    text-align: center;
+}
+
+.menubar-Seal li{
+    transition: .3s all;
+    list-style: none;
+}
+
+.menubar-Seal a{
+    text-decoration: none;
+    list-style: none;
+
+    transition: .3s all;
+    font-size: 0px;
+    padding: 0px;
+    font-family: 'Inter', sans-serif;
+    font-family: 'Jua', sans-serif;
+}
+
+.menubar-Seal h2{
+    text-align: center;
+    color: var(--Seal-colorText-1);
+    padding: 7px;
+    padding-bottom: 7px;
+    font-size: 0px;
+}
+
+.navTitle-Seal{
+    font-family: 'Inter', sans-serif;
+    font-family: 'Jua', sans-serif;
+    color: var(--bgSeal3);
+}
+
+.menubar-Seal:hover{
+    width: 50%;
+    height: 100vh;
+
+    background-color: var(--bgMenuSeal);
+    margin-top: auto;
+}
+
+.menubar-Seal:hover h2{
+    padding: 15px;
+    font-size: 40px;
+}
+
+.menubar-Seal:hover  a{
+    font-size: 30px;
+    color: var(--Seal-colorText-1);;
+    display: block;
+    padding: 20px;
+}
+
+.menubar-Seal:hover img{
+    height: 0px;
+}
+
+.menubar-Seal:hover li{
+    border-top: 1px solid var(--Seal-line);
+    width: 100%;
+}
+
+.menubar-Seal:hover  ul:last-of-type{
+    border-bottom: 1px solid var(--Seal-line);
+}
+
+.menubar-Seal:hover a:hover{
+    font-size: 25px;
+    padding: 20px 0px;
+    background-color: var(--bgHoverSeal);
+}
+
+/*OTTER*/
+/*NAVBAR*/
+.navbar-Otter{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 40px;
+    height: 60px;
+    width: 100%;
+    background-color: var(--bgOtter_color);
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+.menuIcon{
+    width: 70px;
+    height: 70px;
+}
+
+/*MENU LATERAL DESPLEGABLE*/
+.menubar-Otter{
+    width: 10%;
+    text-decoration: none;
+    z-index: 3;
+    margin-top: auto;
+    transition: .4s all;
+    
+}
+
+.menubar-Otter ul{
+    padding: 0px;
+    text-align: center;
+}
+
+.menubar-Otter li{
+    transition: .3s all;
+    list-style: none;
+}
+
+.menubar-Otter a{
+    text-decoration: none;
+    list-style: none;
+
+    transition: .3s all;
+    font-size: 0px;
+    padding: 0px;
+    font-family: 'Inter', sans-serif;
+    font-family: 'Jua', sans-serif;
+}
+
+.menubar-Otter h2{
+    text-align: center;
+    color: var(--Otter-colorText-1);
+    padding: 7px;
+    padding-bottom: 7px;
+    font-size: 0px;
+}
+
+.navTitle-Otter{
+    font-family: 'Inter', sans-serif;
+    font-family: 'Jua', sans-serif;
+    color: var(--bgOtter3);
+}
+
+.menubar-Otter:hover{
+    width: 50%;
+    height: 100vh;
+
+    background-color: var(--bgMenuOtter);
+    margin-top: auto;
+}
+
+.menubar-Otter:hover h2{
+    padding: 15px;
+    font-size: 40px;
+}
+
+.menubar-Otter:hover  a{
+    font-size: 30px;
+    color: var(--Otter-colorText-1);;
+    display: block;
+    padding: 20px;
+}
+
+.menubar-Otter:hover img{
+    height: 0px;
+}
+
+.menubar-Otter:hover li{
+    border-top: 1px solid var(--Otter-line);
+    width: 100%;
+}
+
+.menubar-Otter:hover  ul:last-of-type{
+    border-bottom: 1px solid var(--Otter-line);
+}
+
+.menubar-Otter:hover a:hover{
+    font-size: 25px;
+    padding: 20px 0px;
+    background-color: var(--bgHoverOtter);
+}
+
+/*OCTOPUS*/
+
+/*NAVBAR*/
+.navbar-Octopus{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 40px;
+    height: 60px;
+    width: 100%;
+    background-color: var(--bgOctopus_color);
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+.menuIcon{
+    width: 70px;
+    height: 70px;
+}
+
+/*MENU LATERAL DESPLEGABLE*/
+.menubar-Octopus{
+    width: 10%;
+    text-decoration: none;
+    z-index: 3;
+    margin-top: auto;
+    transition: .4s all;
+    
+}
+
+.menubar-Octopus ul{
+    padding: 0px;
+    text-align: center;
+}
+
+.menubar-Octopus li{
+    transition: .3s all;
+    list-style: none;
+}
+
+.menubar-Octopus a{
+    text-decoration: none;
+    list-style: none;
+
+    transition: .3s all;
+    font-size: 0px;
+    padding: 0px;
+    font-family: 'Inter', sans-serif;
+    font-family: 'Jua', sans-serif;
+}
+
+.menubar-Octopus h2{
+    text-align: center;
+    color: var(--Octopus-colorText-1);
+    padding: 7px;
+    padding-bottom: 7px;
+    font-size: 0px;
+}
+
+.navTitle-Octopus{
+    font-family: 'Inter', sans-serif;
+    font-family: 'Jua', sans-serif;
+    color: var(--bgOctopus3);
+}
+
+.menubar-Octopus:hover{
+    width: 50%;
+    height: 100vh;
+
+    background-color: var(--bgMenuOctopus);
+    margin-top: auto;
+}
+
+.menubar-Octopus:hover h2{
+    padding: 15px;
+    font-size: 40px;
+}
+
+.menubar-Octopus:hover  a{
+    font-size: 30px;
+    color: var(--Octopus-colorText-1);;
+    display: block;
+    padding: 20px;
+}
+
+.menubar-Octopus:hover img{
+    height: 0px;
+}
+
+.menubar-Octopus:hover li{
+    border-top: 1px solid var(--Octopus-line);
+    width: 100%;
+}
+
+.menubar-Octopus:hover  ul:last-of-type{
+    border-bottom: 1px solid var(--Octopus-line);
+}
+
+.menubar-Octopus:hover a:hover{
+    font-size: 25px;
+    padding: 20px 0px;
+    background-color: var(--bgHoverOctopus);
+}

@@ -39,7 +39,7 @@ controller.login = (req, res) => {
                     alert: true,
                     alertTitle: "Bienvenido",
                     alertMessage: "¡Login correcto!",
-                    alertIcon: "succes",
+                    alertIcon: "success",
                     showConfirmButton: false,
                     timer: 900,
                     ruta: 'home',
@@ -101,7 +101,7 @@ controller.selectCharacter1 = (req, res) =>{
                             alert: true,
                             alertTitle: "Seleccionado y en uso",
                             alertMessage: "¡Disfruta con tu nuevo compañero!",
-                            alertIcon: "succes",
+                            alertIcon: "success",
                             showConfirmButton: false,
                             timer: 2000,
                             ruta: '/'
@@ -162,7 +162,7 @@ controller.selectCharacter2 = (req, res) =>{
                             alert: true,
                             alertTitle: "Seleccionado y en uso",
                             alertMessage: "¡Disfruta con tu nuevo compañero!",
-                            alertIcon: "succes",
+                            alertIcon: "success",
                             showConfirmButton: false,
                             timer: 2000,
                             ruta: 'shop'
@@ -223,7 +223,7 @@ controller.selectCharacter3 = (req, res) =>{
                             alert: true,
                             alertTitle: "Seleccionado y en uso",
                             alertMessage: "¡Disfruta con tu nuevo compañero!",
-                            alertIcon: "succes",
+                            alertIcon: "success",
                             showConfirmButton: false,
                             timer: 2000,
                             ruta: 'shop'
@@ -285,7 +285,7 @@ controller.selectCharacter4 = (req, res) =>{
                             alert: true,
                             alertTitle: "Seleccionado y en uso",
                             alertMessage: "¡Disfruta con tu nuevo compañero!",
-                            alertIcon: "succes",
+                            alertIcon: "success",
                             showConfirmButton: false,
                             timer: 2000,
                             ruta: 'shop'

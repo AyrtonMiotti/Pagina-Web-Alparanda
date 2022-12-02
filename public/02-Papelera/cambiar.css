@@ -1,0 +1,104 @@
+/*NAVBAR*/
+.navbar-Octopus{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 40px;
+    height: 60px;
+    width: 100%;
+    background-color: var(--bgOctopus_color);
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+.menuIcon{
+    width: 70px;
+    height: 70px;
+}
+
+/*MENU LATERAL DESPLEGABLE*/
+.menubar-Octopus{
+    width: 10%;
+    text-decoration: none;
+    z-index: 3;
+    margin-top: auto;
+    transition: .4s all;
+    
+}
+
+.menubar-Octopus ul{
+    padding: 0px;
+    text-align: center;
+}
+
+.menubar-Octopus li{
+    transition: .3s all;
+    list-style: none;
+}
+
+.menubar-Octopus a{
+    text-decoration: none;
+    list-style: none;
+
+    transition: .3s all;
+    font-size: 0px;
+    padding: 0px;
+    font-family: 'Inter', sans-serif;
+    font-family: 'Jua', sans-serif;
+}
+
+.menubar-Octopus h2{
+    text-align: center;
+    color: var(--Octopus-colorText-1);
+    padding: 7px;
+    padding-bottom: 7px;
+    font-size: 0px;
+}
+
+.navTitle-Octopus{
+    font-family: 'Inter', sans-serif;
+    font-family: 'Jua', sans-serif;
+    color: var(--bgOctopus3);
+}
+
+.menubar-Octopus:hover{
+    width: 50%;
+    height: 100vh;
+
+    background-color: var(--bgMenuOctopus);
+    margin-top: auto;
+}
+
+.menubar-Octopus:hover h2{
+    padding: 15px;
+    font-size: 40px;
+}
+
+.menubar-Octopus:hover  a{
+    font-size: 30px;
+    color: var(--Octopus-colorText-1);;
+    display: block;
+    padding: 20px;
+}
+
+.menubar-Octopus:hover img{
+    height: 0px;
+}
+
+.menubar-Octopus:hover li{
+    border-top: 1px solid var(--Octopus-line);
+    width: 100%;
+}
+
+.menubar-Octopus:hover  ul:last-of-type{
+    border-bottom: 1px solid var(--Octopus-line);
+}
+
+.menubar-Octopus:hover a:hover{
+    font-size: 25px;
+    padding: 20px 0px;
+    background-color: var(--bgHoverOctopus);
+}
