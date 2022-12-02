@@ -23,7 +23,7 @@ CREATE TABLE IF NOT EXISTS tempUser(
   
   
   -- INSERTS
-  INSERT INTO CHARAC (nameChar) VALUES ("Sharkson Maoma"),("Emmit Nutriales"),("Dave"),("Steffano");
+  INSERT INTO CHARAC (nameChar) VALUES ("Sharkson Maoma"),("Steffano"),("Emmit Nutriales"),("Hank");
   
   INSERT INTO USERS (name_user, passwor, characterID) VALUES ('admin', 'admin', 1);
   
@@ -34,4 +34,3 @@ SELECT * FROM USERS;
 SELECT * FROM CHARAC;
 
 -- UPDATE USERS SET characterID = 2 WHERE user_id = 1;
-  

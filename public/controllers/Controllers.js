@@ -122,14 +122,14 @@ controller.selectCharacter2 = (req, res) =>{
 
         connection.query('SELECT characterID FROM USERS WHERE user_id = ?;', [user], (error, results) =>{
             if(results[0].characterID == newCharID){
-                return res.render('characters', {
+                return res.render('Seal-characters', {
                     alert: true,
                     alertTitle: "Error",
                     alertMessage: "El compañero ya está seleccionado",
                     alertIcon: "warning",
                     showConfirmButton: true,
                     timer: 2500,
-                    ruta: 'shop'
+                    ruta: 'sealShop'
                 })
             }
             if (results[0] === undefined){
@@ -165,7 +165,7 @@ controller.selectCharacter2 = (req, res) =>{
                             alertIcon: "success",
                             showConfirmButton: false,
                             timer: 2000,
-                            ruta: 'shop'
+                            ruta: 'sealShop'
                         });
                     }
                 })
@@ -183,14 +183,14 @@ controller.selectCharacter3 = (req, res) =>{
 
         connection.query('SELECT characterID FROM USERS WHERE user_id = ?;', [user], (error, results) =>{
             if(results[0].characterID == newCharID){
-                return res.render('characters', {
+                return res.render('Otter-Characters', {
                     alert: true,
                     alertTitle: "Error",
                     alertMessage: "El compañero ya está seleccionado",
                     alertIcon: "warning",
                     showConfirmButton: true,
                     timer: 2500,
-                    ruta: 'shop'
+                    ruta: 'otterShop'
                 })
             }
             if (results[0] === undefined){
@@ -219,14 +219,14 @@ controller.selectCharacter3 = (req, res) =>{
                         });
                     }
                     else {
-                        return res.render('characters', {
+                        return res.render('Otter-Characters', {
                             alert: true,
                             alertTitle: "Seleccionado y en uso",
                             alertMessage: "¡Disfruta con tu nuevo compañero!",
                             alertIcon: "success",
                             showConfirmButton: false,
                             timer: 2000,
-                            ruta: 'shop'
+                            ruta: 'otterShop'
                         });
                     }
                 })
@@ -245,14 +245,14 @@ controller.selectCharacter4 = (req, res) =>{
         connection.query('SELECT characterID FROM USERS WHERE user_id = ?;', [user], (error, results) =>{
             console.log(results)
                         if(results[0].characterID == newCharID){
-                return res.render('characters', {
+                return res.render('Octopus-Characters', {
                     alert: true,
                     alertTitle: "Error",
                     alertMessage: "El compañero ya está seleccionado",
                     alertIcon: "warning",
                     showConfirmButton: true,
                     timer: 2500,
-                    ruta: 'shop'
+                    ruta: 'octopusShop'
                 })
             }
             if (results[0] === undefined){
@@ -281,14 +281,14 @@ controller.selectCharacter4 = (req, res) =>{
                         });
                     }
                     else {
-                        return res.render('characters', {
+                        return res.render('Octopus-Characters', {
                             alert: true,
                             alertTitle: "Seleccionado y en uso",
                             alertMessage: "¡Disfruta con tu nuevo compañero!",
                             alertIcon: "success",
                             showConfirmButton: false,
                             timer: 2000,
-                            ruta: 'shop'
+                            ruta: 'octopusShop'
                         });
                     }
                 })

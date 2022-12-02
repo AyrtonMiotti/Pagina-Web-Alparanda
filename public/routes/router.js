@@ -31,9 +31,9 @@ router.post("/logIn", partController.login)
 
 // Select Characters
 router.get('/characters-Shark', partController.selectCharacter1);
-router.get('/characters-Otter', partController.selectCharacter2);
-router.get('/characters-Octopus', partController.selectCharacter3);
-router.get('/characters-Seal', partController.selectCharacter4);
+router.get('/characters-Seal', partController.selectCharacter2);
+router.get('/characters-Otter', partController.selectCharacter3);
+router.get('/characters-Octopus', partController.selectCharacter4);
 
 
 // ------------- SHARK ROUTES -------------
@@ -45,6 +45,27 @@ router.get('/sGames', (req, res)=>{
     return res.render('Shark-Games');
 })
 
+router.get('/sharkShop', (req, res)=>{
+    return res.render('Shark-Characters');
+})
+
+
+// ------------- SEAL ROUTES -------------
+router.get('/sealShop', (req, res)=>{
+    return res.render('Seal-Characters');
+})
+
+
+// ------------- OTTER ROUTES -------------
+router.get('/otterShop', (req, res)=>{
+    return res.render('Otter-Characters');
+})
+
+
+// ------------- OCTOPUS ROUTES -------------
+router.get('/octopusShop', (req, res)=>{
+    return res.render('Octopus-Characters');
+})
 
 
 module.exports = router;

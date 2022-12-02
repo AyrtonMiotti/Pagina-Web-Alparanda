@@ -1,25 +1,3 @@
-/* ----------------------------- FOCA / SEAL -----------------------------*/
-
-
-/*HTML*/
-/* NavBar:
-    <div class="navbar">
-        <img src="../assets/Vector.png" alt="">
-        <h2>Personajes</h2>
-        <div class="menubar">
-            <img class="menuIcon" src="../assets/MenuIcon.png" alt="">
-            <h2 class="MenuTitle">Menú</h2>
-    
-            <ul class="menuUl">
-                <li class="menuLi"><a href="#">Juegos</a></li>
-                <li class="menuLi"><a href="#">Nose 1</a></li>
-                <li class="menuLi"><a href="#">Nose 2</a></li>
-            </ul>
-        </div>
-    </div>
-*/
-
-
 /*GENERAL*/
 *,
 *::after,
@@ -43,21 +21,31 @@
     --Shark-line: #000;
 
     /*Foca*/
-    --bgSeal_color: #A2BBE0;
+    --bgSeal_color: rgb(40, 67, 103);
     --bgSeal: #b9c8df;
-    --bgMenuSeal: #9badc9;
-    --bgHoverSeal: rgba(99, 149, 180, 0.98);
-    --bgSeal3: rgba(96, 167, 207, 0.5);
+    --bgMenuSeal: rgba(50, 77, 108, .99);
+    --bgHoverSeal: rgba(60, 67, 100, 1);
+    --bgSeal3: rgba(135, 180, 146, 0.7);
     --Seal-colorText-1: #fff;
     --Seal-line: #000;
 
     /*Nutria*/
-    --bgOtter-color: #C38C70;
+    --bgOtter_color: #C38C70;
     --bgOtter: #d3b09f;
+    --bgMenuOtter: rgba(192,137,113, .99);
+    --bgHoverOtter: #94644e;
+    --bgOtter3: #453223;
+    --Otter-colorText-1: #fff;
+    --Otter-line: #000;
 
     /*Pulpo*/
-    --bgOctopus-color: #F46E81;
-    --bgOctopus: #eea5b0;
+    --bgOctopus_color: #781088;
+    --bgOctopus: #d3b09f;
+    --bgMenuOctopus: rgba(125,18,134, 0.99);
+    --bgHoverOctopus: rgba(115,8,124, 1);
+    --bgOctopus3: #2b1044;
+    --Octopus-colorText-1: #fff;
+    --Octopus-line: #000;
 
     /*Foca
     --bgSeal-color: #A2BBE0;
@@ -145,7 +133,7 @@
 }
 
 .menubar-Shark:hover  a{
-    font-size: 30px;
+    font-size: 25px;
     color: var(--Shark-colorText-1);;
     display: block;
     padding: 20px;
@@ -165,7 +153,7 @@
 }
 
 .menubar-Shark:hover a:hover{
-    font-size: 25px;
+    font-size: 30px;
     padding: 20px 0px;
     background-color: var(--bgHoverShark);
 }
@@ -252,7 +240,7 @@
 }
 
 .menubar-Seal:hover  a{
-    font-size: 30px;
+    font-size: 25px;
     color: var(--Seal-colorText-1);;
     display: block;
     padding: 20px;
@@ -272,7 +260,7 @@
 }
 
 .menubar-Seal:hover a:hover{
-    font-size: 25px;
+    font-size: 30px;
     padding: 20px 0px;
     background-color: var(--bgHoverSeal);
 }
@@ -358,7 +346,7 @@
 }
 
 .menubar-Otter:hover  a{
-    font-size: 30px;
+    font-size: 25px;
     color: var(--Otter-colorText-1);;
     display: block;
     padding: 20px;
@@ -378,7 +366,7 @@
 }
 
 .menubar-Otter:hover a:hover{
-    font-size: 25px;
+    font-size: 30px;
     padding: 20px 0px;
     background-color: var(--bgHoverOtter);
 }
@@ -465,7 +453,7 @@
 }
 
 .menubar-Octopus:hover  a{
-    font-size: 30px;
+    font-size: 25px;
     color: var(--Octopus-colorText-1);;
     display: block;
     padding: 20px;
@@ -485,7 +473,26 @@
 }
 
 .menubar-Octopus:hover a:hover{
-    font-size: 25px;
+    font-size: 30px;
     padding: 20px 0px;
     background-color: var(--bgHoverOctopus);
 }
+
+
+/*HTML*/
+/* NavBar:
+    <div class="navbar">
+        <img src="../assets/Vector.png" alt="">
+        <h2>Personajes</h2>
+        <div class="menubar">
+            <img class="menuIcon" src="../assets/MenuIcon.png" alt="">
+            <h2 class="MenuTitle">Menú</h2>
+    
+            <ul class="menuUl">
+                <li class="menuLi"><a href="#">Juegos</a></li>
+                <li class="menuLi"><a href="#">Nose 1</a></li>
+                <li class="menuLi"><a href="#">Nose 2</a></li>
+            </ul>
+        </div>
+    </div>
+*/
